@@ -46,7 +46,7 @@ It is possible to specify various flavors of the environment via the keyword arg
 
 Available Modes | Default Mode | Available Difficulties | Default Difficulty |
 | :---   | :--- | :--- | :--- | 
-| [0, ..., 7] | 0 | [0, 1] | 0 |
+| ```[0, ..., 7]``` | ```0``` | ```[0, 1]``` | ```0``` |
 
 
 ## Version History
