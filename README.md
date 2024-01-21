@@ -97,3 +97,22 @@ input of our previous Deep Q-Learning network.
   ![Screenshot 2024-01-21 171551](https://github.com/FYT3RP4TIL/Deep-Convolutional-Q-Learning-OpenAI-Gymnasium-Pac-Man/assets/113416452/a8362500-ab34-41d0-9751-55055fe5ba6d)
 
   ![Screenshot 2024-01-21 171614](https://github.com/FYT3RP4TIL/Deep-Convolutional-Q-Learning-OpenAI-Gymnasium-Pac-Man/assets/113416452/28c05345-e263-4c22-b355-c996d012010f)
+
+## AI Playing Pac-Man :
+  
+https://github.com/FYT3RP4TIL/Deep-Convolutional-Q-Learning-OpenAI-Gymnasium-Pac-Man/assets/113416452/feca2797-a82f-4550-ad2f-4d324a728bce
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
