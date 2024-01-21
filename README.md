@@ -34,7 +34,7 @@ Atari environments have three possible observation types: ```"rgb"```, ```"grays
 
 See variants section for the type of observation used by each environment id by default.
 
-## Variants
+## Variant
 Pacman has different variants of the environment id which have differences in observation, the number of frame-skips and the repeat action probability. The variant used :
 
 | Env-id | obs_type= | frameskip= | repeat_action_probability= |
