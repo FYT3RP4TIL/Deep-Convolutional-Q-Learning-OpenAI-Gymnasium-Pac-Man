@@ -1,4 +1,4 @@
-# Deep-Convolutional-Q-Learning-Pac-Man!
+# Deep-Convolutional-Q-Learning-Pac-Man
 ![1](https://github.com/FYT3RP4TIL/Deep-Convolutional-Q-Learning-OpenAI-Gymnasium-Pac-Man/assets/113416452/4beaca2c-f9ac-4c57-95c4-683cfae19fb2)
 
 ## Environment :
@@ -55,3 +55,45 @@ A thorough discussion of the intricate differences between the versions and conf
 * v5: Stickiness was added back and stochastic frameskipping was removed. The environments are now in the “ALE” namespace.
 * v4: Stickiness of actions was removed
 * v0: Initial versions release
+
+## DCQL :
+* The inputs were vectors encoded values defining the states of the environment. But
+since an encoded vector doesn’t preserve the spatial structure of an image, this is not the best form to
+describe a state. 
+
+* The spatial structure is indeed important because it gives us more information to predict
+the next state, and predicting the next state is of course essential for our AI to know what is the right next
+move. Therefore we need to preserve the spatial structure and to do that, our inputs must be 3D images (2D
+for the array of pixels plus one additional dimension for the colors). 
+
+* In that case, the inputs are simply the images of the screen itself, exactly like what a human sees when playing the game. Following this analogy,
+the AI acts like a human: it observes the input images of the screen when playing the game, the input images go into a convolutional neural network (the brain for a human) which will detect the state in each image.
+
+* Note :  This convolutional neural network doesn’t contain pooling layers, because they would loose the
+location of the objects inside the image, and of course the AI need to keep track of the objects. Therefore
+we only keep the convolutional layers, and then by flattening them into a 1-dimensional vector, we get the
+input of our previous Deep Q-Learning network.
+
+* Then the same process is being ran.Therefore in summary, Deep Convolutional Q-Learning is the same as Deep Q-Learning, with the only
+  difference that the inputs are now images, and a Convolutional Neural Network is added at the beginning
+  of the fully-connected Deep Q-Learning network to detect the states (or simply the objects) of the images.
+
+  ![DCQL](https://github.com/FYT3RP4TIL/Deep-Convolutional-Q-Learning-OpenAI-Gymnasium-Pac-Man/assets/113416452/3e13d5d4-fcad-4723-9890-4062f6f988ee)
+
+### Eligibility Trace ( n-Step Q Learning )
+
+
+* Eligibility traces are one of the basic mechanisms of reinforcement learning. For example,
+  in the popular TD(λ) algorithm, the λ refers to the use of an eligibility trace. Almost any
+  temporal-di↵erence (TD) method, such as Q-learning or Sarsa, can be combined with
+  eligibility traces to obtain a more general method that may learn more efficiently. 
+
+* Eligibility traces unify and generalize TD and Monte Carlo methods. When TD
+  methods are augmented with eligibility traces, they produce a family of methods spanning
+  a spectrum that has Monte Carlo methods at one end (λ = 1) and one-step TD methods at the other (λ = 0). In between are 
+  intermediate methods that are often better than either extreme method. Eligibility traces also provide a way of 
+  implementing Monte Carlo methods online and on continuing problems without episodes.
+
+  ![Screenshot 2024-01-21 171551](https://github.com/FYT3RP4TIL/Deep-Convolutional-Q-Learning-OpenAI-Gymnasium-Pac-Man/assets/113416452/a8362500-ab34-41d0-9751-55055fe5ba6d)
+
+  ![Screenshot 2024-01-21 171614](https://github.com/FYT3RP4TIL/Deep-Convolutional-Q-Learning-OpenAI-Gymnasium-Pac-Man/assets/113416452/28c05345-e263-4c22-b355-c996d012010f)
