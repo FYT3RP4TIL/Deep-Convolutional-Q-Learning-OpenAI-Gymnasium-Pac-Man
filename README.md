@@ -102,6 +102,13 @@ input of our previous Deep Q-Learning network.
   
 https://github.com/FYT3RP4TIL/Deep-Convolutional-Q-Learning-OpenAI-Gymnasium-Pac-Man/assets/113416452/feca2797-a82f-4550-ad2f-4d324a728bce
 
+## References
+
+* https://mitpress.mit.edu/9780262039246/reinforcement-learning/
+* https://arxiv.org/pdf/1602.01783.pdf
+* https://rubikscode.net/2019/07/22/deep-convolutional-q-learning-with-python-and-tensorflow-2-0/
+* https://mitpress.mit.edu/9780262039246/reinforcement-learning/
+
 
 
 
